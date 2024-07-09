@@ -25,10 +25,21 @@ body {
 }
 
 .cardBtn:hover {
-  cursor: pointer;
   background-color: rgb(9, 108, 48);
-  transition: 0.5s ease;
   box-shadow: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.cartSign {
+  background-color: rgb(255, 77, 0);
+  border-radius: 45px;
+  color: white;
+  font-weight: 500;
+  left: -25px;
+  padding: 20px 20px;
+  position: absolute;
+  top: -25px;
 }
 
 .productCard {
