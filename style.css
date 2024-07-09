@@ -9,6 +9,28 @@ body {
   width: 100%;
 }
 
+.cardBtn {
+  background-color: rgb(12, 168, 74);
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  color: white;
+  display: none;
+  font-size: 1.2rem;
+  padding: 15px 40px;
+  position: absolute;
+  top: 35%;
+}
+
+.cardBtn:hover {
+  cursor: pointer;
+  background-color: rgb(9, 108, 48);
+  transition: 0.5s ease;
+  box-shadow: none;
+}
+
 .productCard {
   align-items: center;
   border-radius: 10px;
@@ -18,11 +40,17 @@ body {
   flex-direction: column;
   margin: 25px;
   padding: 25px;
+  position: relative;
 }
 
 .productCard:hover > .productImage {
   opacity: 0.5;
   transition: 0.5s linear;
+}
+
+.productCard:hover > .cardBtn {
+  display: inline;
+  z-index: 99;
 }
 
 .productContainer {
