@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 25px;
-  padding: 20px;
+  padding: 25px;
 }
 
 .productCard:hover > .productImage {
@@ -36,10 +36,15 @@ body {
   width: 25vw;
 }
 
+.inactiveStar {
+  opacity: 0.5;
+}
+
 .productPrice {
   color: rgb(126, 126, 126);
   font-size: 1.2rem;
   margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .productTitle {
