@@ -82,3 +82,35 @@ body {
   font-weight: 500;
   margin-bottom: 0px;
 }
+
+/* Responsive Styles Tablet */
+
+@media screen and (max-width: 1024px) {
+  .cardBtn {
+    font-size: 1rem;
+    padding: 15px 30px;
+    top: 25%;
+  }
+  .productContainer {
+    padding: 10px;
+  }
+  .productImage {
+    width: 20vw;
+  }
+}
+
+/* Responsive Styles Mobile */
+
+@media screen and (max-width: 768px) {
+  .cardBtn {
+    font-size: 1.3rem;
+    padding: 20px 40px;
+    top: 25%;
+  }
+  .productContainer {
+    padding: 30px;
+  }
+  .productImage {
+    width: 60vw;
+  }
+}
