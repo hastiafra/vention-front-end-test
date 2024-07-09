@@ -37,7 +37,7 @@ body {
   color: white;
   font-weight: 500;
   left: -25px;
-  padding: 20px 20px;
+  padding: 20px;
   position: absolute;
   top: -25px;
 }
@@ -101,6 +101,16 @@ body {
     font-size: 1rem;
     padding: 15px 30px;
     top: 25%;
+  }
+  .cartSign {
+    border-radius: 45px;
+    color: white;
+    font-weight: 500;
+    left: -20px;
+    padding: 10px;
+    position: absolute;
+    top: -20px;
+    font-size: 0.8rem;
   }
   .productContainer {
     padding: 10px;
