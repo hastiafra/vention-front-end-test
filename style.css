@@ -35,11 +35,16 @@ body {
   background-color: rgb(255, 77, 0);
   border-radius: 45px;
   color: white;
+  display: none;
   font-weight: 500;
   left: -25px;
   padding: 20px;
   position: absolute;
   top: -25px;
+}
+
+.inactiveStar {
+  opacity: 0.5;
 }
 
 .productCard {
@@ -75,10 +80,6 @@ body {
   width: 25vw;
 }
 
-.inactiveStar {
-  opacity: 0.5;
-}
-
 .productPrice {
   color: rgb(126, 126, 126);
   font-size: 1.2rem;
@@ -94,6 +95,10 @@ body {
   margin-bottom: 0px;
 }
 
+.ratingContainer {
+  display: flex;
+}
+
 /* Responsive Styles Tablet */
 
 @media screen and (max-width: 1024px) {
@@ -105,12 +110,12 @@ body {
   .cartSign {
     border-radius: 45px;
     color: white;
+    font-size: 0.8rem;
     font-weight: 500;
     left: -20px;
     padding: 10px;
     position: absolute;
     top: -20px;
-    font-size: 0.8rem;
   }
   .productContainer {
     padding: 10px;
@@ -120,7 +125,7 @@ body {
   }
 }
 
-/* Responsive Styles Mobile */
+/* Responsive Styles Mobile*/
 
 @media screen and (max-width: 768px) {
   .cardBtn {
