@@ -8,27 +8,32 @@ let cart = [];
 const renderProducts = () => {
   products.map((product) => {
     productSection.innerHTML += `
-    <div class="productCard">
-     <div class="cartSign">
-      <p>In Cart</p>
-     </div>
-    <button class="cardBtn" onclick="productShoppingHandler('${
-      product.id
-    }', this)">
-    Add to cart</button>
+      <div class="productCard">
+        <div class="cartSign">
+          <p>In Cart</p>
+        </div>
+        <button class="cardBtn" onclick="productShoppingHandler('${
+          product.id
+        }', this)">
+          Add to cart
+        </button>
         <img
-        alt='${product.name}'
-        class="productImage"
-        src=${product.imgSrc}
+          alt='${product.name}'
+          class="productImage"
+          src=${product.imgSrc}
         />
         <hr class="divider" />
-        <p class="productTitle">${product.name}</p>
-        <p class="productPrice">${product.price}</p>
-        <div class="ratingContainer">${productRatingHandler(
-          product.rate
-        )}</div>  
-        </div>
-        `;
+        <p class="productTitle">
+          ${product.name}
+        </p>
+        <p class="productPrice">
+          ${product.price}
+        </p>
+        <div class="ratingContainer">
+          ${productRatingHandler(product.rate)}
+        </div>  
+      </div>
+      `;
   });
 };
 
@@ -57,7 +62,7 @@ const productShoppingHandler = (productId, btnElement) => {
     cartSign.style.display = "none";
   } else {
     cart.push({ ...addedProduct, quantity: 1 });
-    btnElement.innerText = "Remove from Cart";
+    btnElement.innerText = "Remove from cart";
     cartSign.style.display = "block";
   }
 };
