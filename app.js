@@ -9,10 +9,12 @@ const renderProducts = () => {
   products.map((product) => {
     productSection.innerHTML += `
     <div class="productCard">
-    <div class="cartSign">
-    <p>In Cart</p>
-    </div>
-    <button class="cardBtn" onclick="handleProductCart('${product.id}', this)">
+     <div class="cartSign">
+      <p>In Cart</p>
+     </div>
+    <button class="cardBtn" onclick="productShoppingHandler('${
+      product.id
+    }', this)">
     Add to cart</button>
         <img
         alt='${product.name}'
@@ -32,19 +34,19 @@ const renderProducts = () => {
 
 //Render Product rating
 const productRatingHandler = (productRate) => {
-  let stars = "";
+  let ratingSign = "";
   for (let i = 0; i < 5; i++) {
     if (i < productRate) {
-      stars += `<img src="assets/star.svg" alt="rating-star" />`;
+      ratingSign += `<img src="assets/star.svg" alt="rating-star" />`;
     } else {
-      stars += `<img class="inactiveStar" src="assets/star.svg" alt="rating-star" />`;
+      ratingSign += `<img class="inactiveSign" src="assets/star.svg" alt="rating-star" />`;
     }
   }
-  return stars;
+  return ratingSign;
 };
 
-//Product Cart
-const handleProductCart = (productId, btnElement) => {
+//add or remove products
+const productShoppingHandler = (productId, btnElement) => {
   const addedProduct = products.find((product) => product.id === productId);
 
   const cartSign = btnElement.parentNode.querySelector(".cartSign");
