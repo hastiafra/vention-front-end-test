@@ -1,6 +1,9 @@
 //Selectors
 const productSection = document.querySelector(".productContainer");
 
+//cart array
+let cart = [];
+
 //Render Products
 const renderProducts = () => {
   products.map((product) => {
@@ -58,6 +61,3 @@ const handleProductCart = (productId, btnElement) => {
 };
 
 renderProducts();
-
-//cart array
-let cart = [];
