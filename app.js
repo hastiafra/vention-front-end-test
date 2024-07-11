@@ -12,9 +12,9 @@ const renderProducts = () => {
     <button class="cardBtn" onclick="handleProductCart('${product.id}', this)">
     Add to cart</button>
         <img
+        alt='${product.name}'
         class="productImage"
         src=${product.imgSrc}
-        alt='${product.name}'
         />
         <hr class="divider" />
         <p class="productTitle">${product.name}</p>
@@ -40,6 +40,7 @@ const productRatingHandler = (productRate) => {
   return stars;
 };
 
+//Product Cart
 const handleProductCart = (productId, btnElement) => {
   const addedProduct = products.find((product) => product.id === productId);
 
