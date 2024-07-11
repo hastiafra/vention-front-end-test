@@ -40,8 +40,6 @@ const productRatingHandler = (productRate) => {
   return stars;
 };
 
-renderProducts();
-
 //cart array
 let cart = [];
 
@@ -60,3 +58,5 @@ const handleProductCart = (productId, btnElement) => {
     cartSign.style.display = "block";
   }
 };
+
+renderProducts();
