@@ -40,9 +40,6 @@ const productRatingHandler = (productRate) => {
   return stars;
 };
 
-//cart array
-let cart = [];
-
 const handleProductCart = (productId, btnElement) => {
   const addedProduct = products.find((product) => product.id === productId);
 
@@ -60,3 +57,6 @@ const handleProductCart = (productId, btnElement) => {
 };
 
 renderProducts();
+
+//cart array
+let cart = [];
