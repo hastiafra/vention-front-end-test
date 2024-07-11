@@ -6,14 +6,15 @@ const renderProducts = () => {
   products.map((product) => {
     productSection.innerHTML += `
     <div class="productCard">
-        <div class="cartSign">
-          <p>In Cart</p>
-        </div>
-        <button class="cardBtn">Add to cart</button>
+    <div class="cartSign">
+    <p>In Cart</p>
+    </div>
+    <button class="cardBtn" onclick="handleProductCart('${product.id}', this)">
+    Add to cart</button>
         <img
-          class="productImage"
-          src=${product.imgSrc}
-          alt=${product.name}
+        class="productImage"
+        src=${product.imgSrc}
+        alt=${product.name}
         />
         <hr class="divider" />
         <p class="productTitle" id="blue-flower">${product.name}</p>
@@ -21,8 +22,8 @@ const renderProducts = () => {
         <div class="ratingContainer">${productRatingHandler(
           product.rate
         )}</div>  
-      </div>
-    `;
+        </div>
+        `;
   });
 };
 
@@ -39,25 +40,19 @@ const productRatingHandler = (productRate) => {
   return stars;
 };
 
-let cardButtons = document.querySelectorAll(".cardBtn");
+renderProducts();
 
-let productAdded = false;
+//cart array
+let cart = [];
 
-const handleProductCart = (ev) => {
-  console.log(productAdded);
+const handleProductCart = (productId, btnElement) => {
+  const addedProduct = products.find((product) => product.id === productId);
 
-  console.log(ev.target);
-  if (!productAdded) {
-    ev.target.innerText = "Remove from cart";
-    productAdded = true;
+  if (cart.some((item) => item.id === productId)) {
+    cart = cart.filter((item) => item.id !== productId);
+    btnElement.innerText = "Add to Cart";
   } else {
-    ev.target.innerText = "Add to cart";
-    productAdded = false;
+    cart.push({ ...addedProduct, quantity: 1 });
+    btnElement.innerText = "Remove from Cart";
   }
 };
-
-cardButtons.forEach((btn) => {
-  btn.addEventListener("click", (ev) => handleProductCart(ev));
-});
-
-renderProducts();
