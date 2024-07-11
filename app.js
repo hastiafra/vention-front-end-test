@@ -48,11 +48,15 @@ let cart = [];
 const handleProductCart = (productId, btnElement) => {
   const addedProduct = products.find((product) => product.id === productId);
 
+  const cartSign = btnElement.parentNode.querySelector(".cartSign");
+
   if (cart.some((item) => item.id === productId)) {
     cart = cart.filter((item) => item.id !== productId);
     btnElement.innerText = "Add to Cart";
+    cartSign.style.display = "none";
   } else {
     cart.push({ ...addedProduct, quantity: 1 });
     btnElement.innerText = "Remove from Cart";
+    cartSign.style.display = "block";
   }
 };
