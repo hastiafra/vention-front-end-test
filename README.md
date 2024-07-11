@@ -1,6 +1,6 @@
 This repository contains a simple web application that demonstrates product cart interaction functionality. It is designed for the purpose of an interview test at Vention.
 
-Features
+Features:
 Product Listing: Products are dynamically rendered with details such as image, name, price, and rating.
 Add to Cart: Clicking the "Add to Cart" button adds the selected product to the cart.
 Remove from Cart: Clicking the "Remove from Cart" button removes the product from the cart.
@@ -11,14 +11,18 @@ HTML: Structuring the product cards and cart indicators.
 CSS: Styling elements and managing visual aspects.
 JavaScript: Implementing dynamic functionality such as adding/removing products from the cart and toggling UI elements.
 Getting Started
+
 To run the application:
 
-Clone this repository: git clone <repository-url>
+Clone this repository;
+
 Open index.html in a web browser.
-Usage
+
+Usage:
 Click "Add to Cart" to add a product to the cart. The button text changes to "Remove from Cart".
 Click "Remove from Cart" to remove the product from the cart. The button text changes back to "Add to Cart".
 The "In Cart" indicator dynamically appears next to products that are added to the cart.
-Notes
+
+Notes:
 This application is a demonstration of basic cart functionality and can be expanded with additional features and optimizations.
 Ensure JavaScript is enabled in your browser to experience full functionality.
