@@ -14,10 +14,10 @@ const renderProducts = () => {
         <img
         class="productImage"
         src=${product.imgSrc}
-        alt=${product.name}
+        alt='${product.name}'
         />
         <hr class="divider" />
-        <p class="productTitle" id="blue-flower">${product.name}</p>
+        <p class="productTitle">${product.name}</p>
         <p class="productPrice">${product.price}</p>
         <div class="ratingContainer">${productRatingHandler(
           product.rate
